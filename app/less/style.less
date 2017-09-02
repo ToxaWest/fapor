@@ -6,9 +6,20 @@
  font-family: 'OpenSans';
  src: url(../fonts/OpenSans-Regular.ttf);
 }
+@font-face {
+ font-family: 'Raleway-Bold';
+ src: url(../fonts/Raleway-Bold.ttf);
+}
+@font-face {
+ font-family: 'Raleway-SemiBold';
+ src: url(../fonts/Raleway-SemiBold.ttf);
+}
 @background-color:#24282f;
+@gold:#b5a263;
 @font1:'NexaBold';
 @font2:'OpenSans';
+@font3:'Raleway-Bold';
+@font4:'Raleway-SemiBold';
 
 body,html{
   margin: 0;
@@ -16,6 +27,29 @@ body,html{
 }
 *{
   box-sizing: border-box;
+}
+h1{
+  color: #fff;
+  text-transform: uppercase;
+  font-family: @font3;
+  font-size: 40px;
+  line-height: 45px;
+}
+h2{
+  color: #24282f;
+  text-transform: uppercase;
+  font-family: @font4;
+  font-size: 24.31px;
+  line-height: 20.26px;
+  position: relative;
+  &::after{
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: calc(~"50% - 39px");
+    border-top: 2px solid @gold;
+    width: 78px;
+  }
 }
 body{
   font-size: 16px;
@@ -66,6 +100,37 @@ body{
       &::before{
 
       }
+    }
+  }
+}
+
+.page_title{
+  background-image: linear-gradient(to bottom, rgba(36, 40, 47, 0.961); 0%, rgba(36, 40, 47, 0.961) 100%), url('/img/layer7.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  width: 100%;
+  height: 285px;
+}
+.breadcrumbs{
+  max-width: 1440px;
+  margin: auto;
+  padding: 30px;
+}
+.management{
+  width: 100%;
+  background: #fff;
+  text-align: center;
+  padding: 30px;
+}
+.feedback{
+  width: 100%;
+  background: #f7f7f7;
+  text-align: center;
+  padding: 30px;
+  h2{
+    &::after{
+      border-top-color: #24282f;
     }
   }
 }

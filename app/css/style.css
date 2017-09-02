@@ -6,6 +6,14 @@
   font-family: 'OpenSans';
   src: url(../fonts/OpenSans-Regular.ttf);
 }
+@font-face {
+  font-family: 'Raleway-Bold';
+  src: url(../fonts/Raleway-Bold.ttf);
+}
+@font-face {
+  font-family: 'Raleway-SemiBold';
+  src: url(../fonts/Raleway-SemiBold.ttf);
+}
 body,
 html {
   margin: 0;
@@ -14,6 +22,30 @@ html {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+h1 {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Raleway-Bold';
+  font-size: 40px;
+  line-height: 45px;
+}
+h2 {
+  color: #24282f;
+  text-transform: uppercase;
+  font-family: 'Raleway-SemiBold';
+  font-size: 24.31px;
+  line-height: 20.26px;
+  position: relative;
+}
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: -webkit-calc(50% - 39px);
+  left: calc(50% - 39px);
+  border-top: 2px solid #b5a263;
+  width: 78px;
 }
 body {
   font-size: 16px;
@@ -68,4 +100,36 @@ body {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
+}
+.page_title {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(36, 40, 47, 0.961)), color-stop(0%), to(rgba(36, 40, 47, 0.961))), url('/img/layer7.jpg');
+  background-image: -webkit-linear-gradient(top, rgba(36, 40, 47, 0.961), 0%, rgba(36, 40, 47, 0.961) 100%), url('/img/layer7.jpg');
+  background-image: -o-linear-gradient(top, rgba(36, 40, 47, 0.961), 0%, rgba(36, 40, 47, 0.961) 100%), url('/img/layer7.jpg');
+  background-image: linear-gradient(to bottom, rgba(36, 40, 47, 0.961), 0%, rgba(36, 40, 47, 0.961) 100%), url('/img/layer7.jpg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  display: block;
+  width: 100%;
+  height: 285px;
+}
+.breadcrumbs {
+  max-width: 1440px;
+  margin: auto;
+  padding: 30px;
+}
+.management {
+  width: 100%;
+  background: #fff;
+  text-align: center;
+  padding: 30px;
+}
+.feedback {
+  width: 100%;
+  background: #f7f7f7;
+  text-align: center;
+  padding: 30px;
+}
+.feedback h2::after {
+  border-top-color: #24282f;
 }
