@@ -63,7 +63,7 @@ gulp.task('images', function() {
     .pipe(gulp.dest('build/img/'));
 });
 
-gulp.task('watch', ['sync','less','html'], function() {
+gulp.task('watch', ['sync','less'], function() {
   gulp.watch('app/less/**/*.less',['less']);
   gulp.watch('app/**/*.html', browsersync.reload);
   gulp.watch('app/js/**/*.js', browsersync.reload);

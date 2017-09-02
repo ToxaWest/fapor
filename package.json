@@ -25,6 +25,7 @@
     "browser-sync": "^2.18.12",
     "del": "^3.0.0",
     "gulp-less": "^3.3.2",
-    "gulp-rename": "^1.2.2"
+    "gulp-rename": "^1.2.2",
+    "save-dev": "^2.0.0"
   }
 }
