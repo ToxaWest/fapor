@@ -41,11 +41,7 @@ gulp.task('sync', function(){
     notify:false
   });
 });
-gulp.task('html', function () {
-    gulp.src('app/html/*.html')
-        .pipe(rigger())
-        .pipe(gulp.dest('app/'));
-});
+
 
 gulp.task('images', function() {
   return gulp.src('app/img/*.+(jpg|png)')
