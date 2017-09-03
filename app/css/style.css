@@ -72,6 +72,9 @@
 .icon-twitter:hover {
   background: #41ABE1;
 }
+.icon-dribbble:before {
+  content: "\e902";
+}
 body,
 html {
   margin: 0;
@@ -373,4 +376,16 @@ body {
 .feedback__image img {
   width: 120%;
   height: 120%;
+}
+#footer {
+  background: #2b2f35;
+  width: 100%;
+}
+.footer {
+  padding: 70px 0 40px;
+}
+.footer-bottom {
+  width: 100%;
+  padding: 16px 0;
+  background: #24282f;
 }
