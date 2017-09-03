@@ -11,6 +11,10 @@
  src: url(../fonts/OpenSans-Light.ttf);
 }
 @font-face {
+ font-family: 'OpenSans-SemiBold';
+ src: url(../fonts/OpenSans-SemiBold.ttf);
+}
+@font-face {
  font-family: 'Raleway-Bold';
  src: url(../fonts/Raleway-Bold.ttf);
 }
@@ -81,6 +85,7 @@
 @font1:'NexaBold';
 @font2:'OpenSans';
 @font2-2:'OpenSans-Light';
+@font2-3:'OpenSans-SemiBold';
 @font3:'Raleway-Bold';
 @font4:'Raleway-SemiBold';
 @font5:'Raleway-Medium';
@@ -114,6 +119,13 @@ h2{
     border-top: 2px solid @gold;
     width: 78px;
   }
+}
+h3{
+  font-family: font2-3;
+  color: @gold;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 24px;
 }
 .btn{
   color: #24282f;
@@ -354,6 +366,63 @@ body{
 }
 .footer{
   padding: 70px 0 40px;
+  max-width: 1195px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  &__block{
+    max-width: 385px;
+    margin: 0 36px;
+  }
+  &__text{
+    color: #6e7279;
+    font-family: @font2;
+    font-size: 14px;
+    line-height: 24px;
+    a{
+      color: #6e7279;
+      font-family: @font2;
+      font-size: 14px;
+      line-height: 24px;
+      cursor: pointer;
+      text-decoration: none;
+      &:hover{
+        color: #eaeaea;
+      }
+    }
+    form{
+      max-width: 300px;
+      input{
+        width: 100%;
+        color: #6e7279;
+        font-family: @font2;
+        font-size: 14px;
+        line-height: 24px;
+        background-color: transparent;
+        border: 1px solid #6e7279;
+        padding: 12px;
+      }
+      button{
+        width: 100%;
+        color: #6e7279;
+        font-family: @font2;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        background-color: @gold;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        margin: 12px auto;
+        padding: 12px;
+        transition: 0.3s;
+        &:hover{
+          color: @gold;
+          background: #6e7279;
+        }
+      }
+    }
+  }
   &-bottom{
     width: 100%;
     padding:16px 0;
