@@ -135,7 +135,7 @@ h3{
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 25px;
-  padding: 13px 50px;
+  padding: 13px 40px;
   font-family: @font2;
   transition: 0.5s;
   &:hover{
@@ -143,10 +143,6 @@ h3{
     color: @gold;
   }
 }
-// html{
-//   background: url('../img/test_light.jpg');
-//   opacity: 0.8;
-// }
 body{
   font-size: 16px;
   background-color: @background-color;
@@ -183,6 +179,12 @@ body{
     display: inline-block;
   }
 }
+@keyframes navigation {
+  0%{
+    left:50%;
+    width: 0;
+  }
+}
 .navigation{
   float: right;
   margin-right: -70px;
@@ -195,9 +197,16 @@ body{
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    &:hover{
-      &::before{
-
+    &:hover, &.active{
+      position: relative;
+      &::after{
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        border-top: 2px solid @gold;
+        width: 100%;
+        animation: navigation 0.7s;
       }
     }
   }
@@ -242,7 +251,7 @@ body{
   }
   &__description{
     display: flex;
-    padding: 30px 10px;
+    padding: 25px 10px 0;
     justify-content: space-between;
   }
   &__text{
@@ -261,16 +270,16 @@ body{
     text-transform: capitalize;
     font-family: @font2;
   }
-  .social{
-    display: flex;
-    margin-right: -3.5px;
-  }
+}
+.social{
+  display: flex;
+  margin-right: -3.5px;
 }
 .feedback{
   width: 100%;
   background: #f7f7f7;
   text-align: center;
-  padding: 120px 30px 35px;
+  padding: 110px 30px 35px;
   h2{
     &::after{
       border-top-color: #24282f;
@@ -283,7 +292,7 @@ body{
     text-align: center;
     .slick-arrow{
       position: absolute;
-      top:20%;
+      top:55px;
       z-index: 300;
       font-size: 0;
       cursor: pointer;
@@ -300,18 +309,18 @@ body{
       }
       &::before{
         content: '';
-        font-size: 16px;
+        font-size: 28px;
         font-family: 'icomoon' !important;
       }
     }
     .slick-next{
-      right: 0;
+      right: 25px;
       &::before{
         content: '\e900';
       }
     }
     .slick-prev{
-      left: 0;
+      left: 25px;
       &::before{
         content: '\e901';
       }
@@ -328,7 +337,7 @@ body{
     line-height: 24px;
     font-family: @font2-2;
     color: #000;
-    padding: 30px;
+    padding: 32px;
   }
   &__name{
     font-size: 16px;
@@ -339,7 +348,7 @@ body{
   }
   &__position{
     font-size: 14px;
-    line-height: 24px;
+    line-height: 35px;
     color: #000;
     font-family: @font2;
     text-transform: capitalize;
@@ -355,23 +364,35 @@ body{
     img{
       width: 120%;
       height: 120%;
-
-
     }
   }
 }
 #footer{
   background: #2b2f35;
   width: 100%;
+  .social{
+    float: right;
+    [class^="icon-"], [class*=" icon-"]{
+      background: transparent;
+      border:1px solid #6e7279;
+      color: #6e7279;
+      margin: 0 5px;
+      &:hover{
+        background: @gold;
+        border-color: @gold;
+        color: #fff;
+      }
+    }
+  }
 }
 .footer{
-  padding: 70px 0 40px;
+  padding: 60px 0 40px;
   max-width: 1195px;
   margin: auto;
   display: flex;
   justify-content: space-between;
   &__block{
-    max-width: 385px;
+    max-width: 300px;
     margin: 0 36px;
   }
   &__text{
@@ -391,7 +412,7 @@ body{
       }
     }
     form{
-      max-width: 300px;
+      width: 300px;
       input{
         width: 100%;
         color: #6e7279;
@@ -400,7 +421,7 @@ body{
         line-height: 24px;
         background-color: transparent;
         border: 1px solid #6e7279;
-        padding: 12px;
+        padding: 6px 12px;
       }
       button{
         width: 100%;
@@ -414,7 +435,7 @@ body{
         cursor: pointer;
         color: #fff;
         margin: 12px auto;
-        padding: 12px;
+        padding: 7px;
         transition: 0.3s;
         &:hover{
           color: @gold;
@@ -427,5 +448,15 @@ body{
     width: 100%;
     padding:16px 0;
     background: #24282f;
+    &__content{
+      max-width: 1195px;
+      display: flex;
+      padding: 0 36px;
+      margin: auto;
+      justify-content: space-between;
+      .footer__text{
+        line-height: 40px;
+      }
+    }
   }
 }
