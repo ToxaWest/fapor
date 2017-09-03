@@ -256,7 +256,7 @@ body{
   width: 100%;
   background: #f7f7f7;
   text-align: center;
-  padding: 30px;
+  padding: 120px 30px 35px;
   h2{
     &::after{
       border-top-color: #24282f;
@@ -264,8 +264,44 @@ body{
   }
   &__comments{
     max-width: 1195px;
-    margin: auto;
+    margin: 95px auto 75px;
+    position: relative;
     text-align: center;
+    .slick-arrow{
+      position: absolute;
+      top:20%;
+      z-index: 300;
+      font-size: 0;
+      cursor: pointer;
+      background: none;
+      border:none;
+      opacity: 0.5;
+      transition: 0.3s;
+      &:hover{
+        opacity: 1;
+      }
+      &:focus{
+        border: none;
+        outline: none;
+      }
+      &::before{
+        content: '';
+        font-size: 16px;
+        font-family: 'icomoon' !important;
+      }
+    }
+    .slick-next{
+      right: 0;
+      &::before{
+        content: '\e900';
+      }
+    }
+    .slick-prev{
+      left: 0;
+      &::before{
+        content: '\e901';
+      }
+    }
   }
   &__comment{
     display: flex;
@@ -278,6 +314,7 @@ body{
     line-height: 24px;
     font-family: @font2-2;
     color: #000;
+    padding: 30px;
   }
   &__name{
     font-size: 16px;
