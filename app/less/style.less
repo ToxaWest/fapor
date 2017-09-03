@@ -7,6 +7,10 @@
  src: url(../fonts/OpenSans-Regular.ttf);
 }
 @font-face {
+ font-family: 'OpenSans-Light';
+ src: url(../fonts/OpenSans-Light.ttf);
+}
+@font-face {
  font-family: 'Raleway-Bold';
  src: url(../fonts/Raleway-Bold.ttf);
 }
@@ -73,6 +77,7 @@
 @gold:#b5a263;
 @font1:'NexaBold';
 @font2:'OpenSans';
+@font2-2:'OpenSans-Light';
 @font3:'Raleway-Bold';
 @font4:'Raleway-SemiBold';
 @font5:'Raleway-Medium';
@@ -255,6 +260,52 @@ body{
   h2{
     &::after{
       border-top-color: #24282f;
+    }
+  }
+  &__comments{
+    max-width: 1195px;
+    margin: auto;
+    text-align: center;
+  }
+  &__comment{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 150px;
+  }
+  &__text{
+    font-size: 14px;
+    line-height: 24px;
+    font-family: @font2-2;
+    color: #000;
+  }
+  &__name{
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 24px;
+    font-family: @font4;
+    color: @gold;
+  }
+  &__position{
+    font-size: 14px;
+    line-height: 24px;
+    color: #000;
+    font-family: @font2;
+    text-transform: capitalize;
+  }
+  &__image{
+    margin: auto;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    img{
+      width: 120%;
+      height: 120%;
+
+
     }
   }
 }
