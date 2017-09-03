@@ -36,7 +36,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'icomoon' !important;
   speak: none;
@@ -58,7 +57,6 @@
   margin: 3.5px;
   text-decoration: none;
 }
-
 .icon-google-plus:before {
   content: "\ea8b";
 }
@@ -80,6 +78,9 @@
 .icon-dribbble:before {
   content: "\e902";
 }
+.icon-menu:before {
+  content: "\e9bd";
+}
 @background-color:#24282f;
 @gold:#b5a263;
 @font1:'NexaBold';
@@ -89,7 +90,6 @@
 @font3:'Raleway-Bold';
 @font4:'Raleway-SemiBold';
 @font5:'Raleway-Medium';
-
 body,html{
   margin: 0;
   padding: 0;
@@ -154,6 +154,10 @@ body{
   margin: auto;
   padding: 0 50px;
   background: @background-color;
+  position: relative;
+}
+.icon-menu{
+  display: none;
 }
 .logo{
   text-transform: uppercase;
@@ -163,7 +167,6 @@ body{
   margin: auto auto auto 0;
   line-height: 24px;
   display: flex;
-
   font-family: @font1;
   text-decoration: none;
   transition: 0.3s 0s;
@@ -236,6 +239,7 @@ body{
     &-card{
       width: 33.33333%;
       margin: 50px;
+      max-width: 310px;
     }
   }
   &__images{
@@ -422,6 +426,9 @@ body{
         background-color: transparent;
         border: 1px solid #6e7279;
         padding: 6px 12px;
+        &:focus{
+          outline: none;
+        }
       }
       button{
         width: 100%;
@@ -457,6 +464,107 @@ body{
       .footer__text{
         line-height: 40px;
       }
+    }
+  }
+}
+@media screen and (max-width: 1680px){
+  .navigation{
+    margin-right: 0;
+  }
+}
+@media screen and (max-width:1280px) and (min-width:768px){
+  .management__peoples{
+    justify-content: center;
+    &-card{
+      width: 50%;
+      margin: 50px 30px;
+      &:last-child{
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width:1024px){
+  main{
+    margin-top: 70px;
+  }
+  .navigation{
+    position: absolute;
+    max-width: 400px;
+    width: 100%;
+    right: -100%;
+    top:100%;
+    background: rgba(0, 0, 0, 0.9);
+    transition: 0.6s;
+    &.active{
+      right: 0;
+    }
+    a{
+      width: 100%;
+      display: inline-block;
+      line-height: 10px;
+    }
+  }
+  #header{
+    padding: 15px 50px;
+    position: fixed;
+    width: 100%;
+    top:0;
+  }
+  .icon-menu{
+    cursor: pointer;
+    color: @gold;
+    background: transparent;
+    display: block;
+    font-size: 40px;
+    transition: 0.3s;
+    &:hover, &.active{
+      color: #fff;
+      transform: rotate(180deg);
+    }
+  }
+  .management__peoples{
+    flex-wrap: wrap;
+    justify-content: center;
+    &-card{
+      width: auto;
+    }
+  }
+  .feedback__comment {
+    margin: 0 20px;
+  }
+  .feedback__comments {
+    .slick-arrow{
+      top:auto;
+      bottom: -65px;
+      &::before{
+        content: '';
+        font-size: 60px;
+        font-family: 'icomoon' !important;
+      }
+    }
+    .slick-next{
+      right: calc(~"50% - 60px");
+      &::before{
+        content: '\e900';
+      }
+    }
+    .slick-prev{
+      left: calc(~"50% - 60px");
+      &::before{
+        content: '\e901';
+      }
+    }
+  }
+  .footer{
+    flex-wrap: wrap;
+    &__block{
+      &:last-child{
+        width: 80%;
+        margin: 30px auto auto;
+
+      }
+      width: 50%;
     }
   }
 }
