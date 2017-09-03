@@ -300,6 +300,13 @@ body {
   text-transform: uppercase;
   font-size: 16px;
   font-family: 'Raleway-Medium';
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.management__name:hover {
+  color: #b5a263;
 }
 .management__position {
   color: #b5a263;
@@ -395,6 +402,13 @@ body {
   line-height: 24px;
   font-family: 'Raleway-SemiBold';
   color: #b5a263;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.feedback__name:hover {
+  color: #232323;
 }
 .feedback__position {
   font-size: 14px;
