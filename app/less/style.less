@@ -14,12 +14,68 @@
  font-family: 'Raleway-SemiBold';
  src: url(../fonts/Raleway-SemiBold.ttf);
 }
+@font-face {
+ font-family: 'Raleway-Medium';
+ src: url(../fonts/Raleway-Medium.ttf);
+}
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?lzuouj');
+  src:  url('../fonts/icomoon.eot?lzuouj#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?lzuouj') format('truetype'),
+    url('../fonts/icomoon.woff?lzuouj') format('woff'),
+    url('../fonts/icomoon.svg?lzuouj#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #dedede;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  transition: 0.3s;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  margin: 3.5px;
+  text-decoration: none;
+}
+
+.icon-google-plus:before {
+  content: "\ea8b";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-google-plus:hover{
+    background: #db4437;
+}
+.icon-facebook:hover {
+  background: #3B5998;
+}
+.icon-twitter:hover {
+  background: #41ABE1;
+}
 @background-color:#24282f;
 @gold:#b5a263;
 @font1:'NexaBold';
 @font2:'OpenSans';
 @font3:'Raleway-Bold';
 @font4:'Raleway-SemiBold';
+@font5:'Raleway-Medium';
 
 body,html{
   margin: 0;
@@ -51,14 +107,36 @@ h2{
     width: 78px;
   }
 }
+.btn{
+  color: #24282f;
+  font-size: 16px;
+  line-height: 24px;
+  border:1px solid #24282f;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 25px;
+  padding: 13px 50px;
+  font-family: @font2;
+  transition: 0.5s;
+  &:hover{
+    background: #24282f;
+    color: @gold;
+  }
+}
+// html{
+//   background: url('../img/test_light.jpg');
+//   opacity: 0.8;
+// }
 body{
   font-size: 16px;
   background-color: @background-color;
+
 }
 #header{
   max-width: 1440px;
   display: flex;
   margin: auto;
+  padding: 0 50px;
   background: @background-color;
 }
 .logo{
@@ -69,7 +147,7 @@ body{
   margin: auto auto auto 0;
   line-height: 24px;
   display: flex;
-  padding: 32px;
+
   font-family: @font1;
   text-decoration: none;
   transition: 0.3s 0s;
@@ -87,6 +165,7 @@ body{
 }
 .navigation{
   float: right;
+  margin-right: -70px;
   a{
     line-height: 100px;
     font-size: 14px;
@@ -113,15 +192,60 @@ body{
   height: 285px;
 }
 .breadcrumbs{
-  max-width: 1440px;
+  max-width: 1452px;
   margin: auto;
-  padding: 30px;
+  padding: 49px;
 }
 .management{
   width: 100%;
   background: #fff;
   text-align: center;
-  padding: 30px;
+  padding: 130px 0 30px;
+  &__peoples{
+    max-width: 1225px;
+    margin: auto;
+    display: flex;
+    &-card{
+      width: 33.33333%;
+      margin: 50px;
+    }
+  }
+  &__images{
+    width: 100%;
+    overflow: hidden;
+    max-height: 300px;
+    display: flex;
+    justify-content: center;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__description{
+    display: flex;
+    padding: 30px 10px;
+    justify-content: space-between;
+  }
+  &__text{
+    text-align: left;
+    float: left;
+  }
+  &__name{
+    color: #232323;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: @font5;
+  }
+  &__position{
+    color: @gold;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-family: @font2;
+  }
+  .social{
+    display: flex;
+    margin-right: -3.5px;
+  }
 }
 .feedback{
   width: 100%;
